@@ -1,0 +1,78 @@
+{
+  "en": [
+    {
+      "title": "GitHub",
+      "icon": "github",
+      "link": "https://github.com/GetToSet/",
+      "color": "#24292e"
+    },
+    {
+      "title": "Dribbble",
+      "icon": "dribbble",
+      "link": "https://dribbble.com/GetToSet/",
+      "color": "#ea4c89"
+    },
+    {
+      "title": "Unsplash",
+      "icon": "unsplash",
+      "link": "https://unsplash.com/@ethanwong/",
+      "color": "#111"
+    },
+    {
+      "title": "Instagram",
+      "icon": "instagram",
+      "link": "https://instagram.com/gettoset/",
+      "color": "#262626"
+    },
+    {
+      "title": "Facebook",
+      "icon": "facebook",
+      "link": "https://www.facebook.com/e1hanw0ng/",
+      "color": "#1877f2"
+    },
+    {
+      "title": "Twitter",
+      "icon": "twitter",
+      "link": "https://twitter.com/e1hanw0ng/",
+      "color": "#1da1f2"
+    }
+  ],
+  "zh": [
+    {
+      "title": "GitHub",
+      "icon": "github",
+      "link": "https://github.com/GetToSet/",
+      "color": "#24292e"
+    },
+    {
+      "title": "Dribbble",
+      "icon": "dribbble",
+      "link": "https://dribbble.com/GetToSet/",
+      "color": "#ea4c89"
+    },
+    {
+      "title": "Unsplash",
+      "icon": "unsplash",
+      "link": "https://unsplash.com/@ethanwong/",
+      "color": "#111"
+    },
+    {
+      "title": "Twitter",
+      "icon": "twitter",
+      "link": "https://twitter.com/e1hanw0ng/",
+      "color": "#1da1f2"
+    },
+    {
+      "title": "微博",
+      "icon": "weibo",
+      "link": "https://weibo.com/u/6583082979/",
+      "color": "#e6162d"
+    },
+    {
+      "title": "即刻",
+      "icon": "jike",
+      "link": "https://web.okjike.com/u/6AA96646-68E7-4614-843F-D0F8D271FDB6/",
+      "color": "#ffe411"
+    }
+  ]
+}

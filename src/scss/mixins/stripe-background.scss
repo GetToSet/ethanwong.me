@@ -1,0 +1,13 @@
+@mixin stripe-background($direction, $step, $colors) {
+  $length: length($colors);
+  @if $length > 1 {
+    $stripes: ();
+    @for $i from 0 through $length - 1 {
+      $stripes: append($stripes, nth($colors, $i + 1) $i * $step, comma);
+      $stripes: append($stripes, nth($colors, $i + 1) ($i + 1) * $step, comma);
+    }
+    background-image: repeating-linear-gradient($direction, $stripes);
+  } @else if $length == 1 {
+    background-color: $colors;
+  }
+}

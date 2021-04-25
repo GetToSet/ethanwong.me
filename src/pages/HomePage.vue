@@ -1,0 +1,248 @@
+<template>
+  <div class="homepage">
+    <div
+      class="homepage__background position-absolute vh-100 w-100"
+      style="top: 0"
+    />
+    <div class="content">
+      <LanguageChooser
+        class="homepage__lang-chooser"
+        :selectedLanguage="currentLanguage"
+      />
+      <div
+        v-if="showsMigrationTip"
+        class="alert alert-info homepage__migration-tip"
+      >
+        <span v-html="migrationTip" />
+      </div>
+      <main>
+        <h1 class="homepage__title mb-2">
+          <img
+            src="@/assets/handwave.png"
+            class="homepage__handwave d-inline-block"
+          />
+          {{ welcomeTitle }}
+        </h1>
+        <p class="homepage__intro mb-3">I'm <TypeIt v-bind="typeItProps" /></p>
+      </main>
+      <LinkList :currentLanguage="currentLanguage" />
+      <footer
+        class="homepage__footer position-absolute small color-gray"
+        style="bottom: 12px"
+      >
+        <span v-html="footerContent" />
+      </footer>
+    </div>
+  </div>
+</template>
+
+<script>
+import LanguageChooser from "@/components/LanguageChooser.vue";
+import TypeIt from "@/components/TypeIt.vue";
+import LinkList from "@/components/LinkList.vue";
+
+export default {
+  components: { LanguageChooser, TypeIt, LinkList },
+  data() {
+    return {
+      typeItProps: {
+        strings: [
+          "a full-time iOS & Mac developer.",
+          "a self-taught frontend developer.",
+          "a graphics & UI design enthusiast.",
+          "a newcomer to photography.",
+          "a lover of coffee.",
+        ],
+        lifeLike: true,
+        loop: true,
+        cursorSpeed: 200,
+        speed: 100,
+        deleteSpeed: 50,
+        nextStringDelay: 750,
+        breakLines: false,
+      },
+      currentLanguage: "en",
+      showsMigrationTip: false,
+      beianId: null,
+    };
+  },
+  mounted() {
+    switch (location.host) {
+      case "busybunny.xyz": {
+        this.currentLanguage = "zh";
+        this.beianId = 1;
+        this.showsMigrationTip = true;
+        break;
+      }
+      case "busybunny.cn": {
+        this.currentLanguage = "zh";
+        this.beianId = 2;
+        this.showsMigrationTip = true;
+        break;
+      }
+      case "gettoset.cn": {
+        this.currentLanguage = "zh";
+        this.beianId = 3;
+        break;
+      }
+      case "ethanwong.cn": {
+        this.currentLanguage = "zh";
+        this.beianId = 4;
+        break;
+      }
+      // case "localhost:8080": {
+      //   this.currentLanguage = "zh";
+      //   this.beianId = 4;
+      //   this.showsMigrationTip = true;
+      //   break;
+      // }
+    }
+    if (this.currentLanguage === "zh") {
+      document.title = "Ethan 的个人主页";
+    }
+  },
+  computed: {
+    migrationTip() {
+      return `
+      ${location.host} 已经迁移到 <a
+        href="https://ethanwong.cn/"
+        alt="ethanwong.cn"
+        title="ethanwong.cn"
+        >ethanwong.cn</a
+      >
+      `;
+    },
+    welcomeTitle() {
+      return this.currentLanguage === "zh"
+        ? "你好，我是 Ethan。"
+        : "Hi, I'm Ethan Wong.";
+    },
+    beianDescription() {
+      return `浙ICP备19010471号${this.beianId ? "-" + this.beianId : ""}`;
+    },
+    footerContent() {
+      if (this.currentLanguage === "en") {
+        return `
+        Copyright © ${new Date().getFullYear()}
+        <a
+          class="homepage__footer--link"
+          href="mailto:e1hanw0ng@gmail.com"
+          alt="e1hanw0ng@gmail.com"
+          title="e1hanw0ng@gmail.com"
+          >Ethan Wong</a
+        >, All rights reserved.
+        `;
+      } else {
+        return `
+        版权所有 © ${new Date().getFullYear()}
+        <a
+          class="homepage__footer--link"
+          href="mailto:e1hanw0ng@gmail.com"
+          alt="e1hanw0ng@gmail.com"
+          title="e1hanw0ng@gmail.com"
+          >Ethan Wong</a
+        >，保留所有权利。
+        <br />
+        <a
+          class="homepage__footer--link"
+          href="https://beian.miit.gov.cn/"
+          alt="${this.beianDescription}"
+          title="${this.beianDescription}"
+        >
+          ${this.beianDescription}
+        </a>
+        `;
+      }
+    },
+  },
+};
+</script>
+
+<style scoped lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Courier+Prime&display=swap");
+@import "@/scss/mixins/stripe-background";
+
+$border-width: 12px;
+$handwave-degree: -15deg;
+
+.content {
+  position: relative;
+
+  margin: 12px;
+  height: calc(100vh - 2 * #{$border-width});
+  background-color: $theme-background;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage {
+  color: $theme-text;
+  text-align: center;
+
+  &__migration-tip {
+    position: absolute;
+    top: 0;
+    margin: 12px auto 0 auto;
+  }
+
+  &__background {
+    @include stripe-background(45deg, 32px, (#2ec4b6, #e71d36, #ff9f1c));
+  }
+
+  &__lang-chooser {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 64px;
+    font-family: "Baloo 2", sans-serif;
+  }
+
+  &__handwave {
+    height: 1em;
+    margin-bottom: 0.1em;
+    animation: handwave 3s ease-in-out infinite;
+  }
+
+  &__intro {
+    font-size: 32px;
+    font-family: "Courier Prime", monospace;
+  }
+
+  &__footer {
+    color: $theme-secondary;
+    /deep/ &--link {
+      color: $theme-secondary;
+      text-decoration: underline;
+    }
+  }
+
+  @keyframes handwave {
+    0% {
+      transform: rotate(0);
+    }
+    10% {
+      transform: rotate($handwave-degree);
+    }
+    20% {
+      transform: rotate(0);
+    }
+    80% {
+      transform: rotate(0);
+    }
+    90% {
+      transform: rotate($handwave-degree);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+}
+</style>

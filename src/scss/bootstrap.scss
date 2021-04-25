@@ -1,0 +1,7 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$font-family-zh: "PingFangSC-Regular", "PingFang SC", "Microsoft YaHei";
+$font-family-base: $font-family-zh, $font-family-sans-serif;
+
+@import "~bootstrap/scss/bootstrap";
