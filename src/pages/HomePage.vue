@@ -234,7 +234,7 @@ $handwave-degree: -15deg;
 
   &__footer {
     color: var(--theme-secondary);
-    :v-deep(.child) &--link {
+    ::v-deep(&--link) {
       color: var(--theme-secondary);
       text-decoration: underline;
     }
