@@ -94,12 +94,12 @@ export default {
         this.showsMigrationTip = true;
         break;
       }
-      case "localhost:8080": {
-        this.currentLanguage = "zh";
-        this.beianId = 4;
-        this.showsMigrationTip = true;
-        break;
-      }
+      // case "localhost:8080": {
+      //   this.currentLanguage = "zh";
+      //   this.beianId = 4;
+      //   this.showsMigrationTip = true;
+      //   break;
+      // }
     }
     if (this.currentLanguage === "zh") {
       document.title = "Ethan 的个人主页";
@@ -118,9 +118,9 @@ export default {
       `
         : `
       ${location.host} has been moved to <a
-        href="https://ethanwong.cn/"
-        alt="ethanwong.cn"
-        title="ethanwong.cn"
+        href="https://ethanwong.me/"
+        alt="ethanwong.me"
+        title="ethanwong.me"
         >ethanwong.cn</a
       >
       `;
