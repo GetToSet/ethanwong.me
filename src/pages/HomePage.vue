@@ -90,6 +90,10 @@ export default {
         this.beianId = 4;
         break;
       }
+      case "busybunny.me": {
+        this.showsMigrationTip = true;
+        break;
+      }
       case "localhost:8080": {
         this.currentLanguage = "zh";
         this.beianId = 4;
@@ -103,8 +107,17 @@ export default {
   },
   computed: {
     migrationTip() {
-      return `
+      return this.currentLanguage === "zh"
+        ? `
       ${location.host} 已经迁移到 <a
+        href="https://ethanwong.cn/"
+        alt="ethanwong.cn"
+        title="ethanwong.cn"
+        >ethanwong.cn</a
+      >
+      `
+        : `
+      ${location.host} has been moved to <a
         href="https://ethanwong.cn/"
         alt="ethanwong.cn"
         title="ethanwong.cn"
@@ -221,7 +234,7 @@ $handwave-degree: -15deg;
 
   &__footer {
     color: var(--theme-secondary);
-    :deep &--link {
+    :v-deep(.child) &--link {
       color: var(--theme-secondary);
       text-decoration: underline;
     }
