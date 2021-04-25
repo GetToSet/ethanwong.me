@@ -90,12 +90,12 @@ export default {
         this.beianId = 4;
         break;
       }
-      // case "localhost:8080": {
-      //   this.currentLanguage = "zh";
-      //   this.beianId = 4;
-      //   this.showsMigrationTip = true;
-      //   break;
-      // }
+      case "localhost:8080": {
+        this.currentLanguage = "zh";
+        this.beianId = 4;
+        this.showsMigrationTip = true;
+        break;
+      }
     }
     if (this.currentLanguage === "zh") {
       document.title = "Ethan 的个人主页";
@@ -163,15 +163,14 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Courier+Prime&display=swap");
 @import "@/scss/mixins/stripe-background";
 
-$border-width: 12px;
 $handwave-degree: -15deg;
 
 .content {
   position: relative;
 
-  margin: 12px;
-  height: calc(100vh - 2 * #{$border-width});
-  background-color: $theme-background;
+  margin: $page-border-width;
+  height: calc(100vh - 2 * #{$page-border-width});
+  background-color: var(--theme-background);
 
   display: flex;
   flex-direction: column;
@@ -180,7 +179,7 @@ $handwave-degree: -15deg;
 }
 
 .homepage {
-  color: $theme-text;
+  color: var(--theme-text);
   text-align: center;
 
   &__migration-tip {
@@ -190,7 +189,11 @@ $handwave-degree: -15deg;
   }
 
   &__background {
-    @include stripe-background(45deg, 32px, (#2ec4b6, #e71d36, #ff9f1c));
+    @include stripe-background(
+      45deg,
+      32px,
+      (var(--stripe-green), var(--stripe-red), var(--stripe-yellow))
+    );
   }
 
   &__lang-chooser {
@@ -217,9 +220,9 @@ $handwave-degree: -15deg;
   }
 
   &__footer {
-    color: $theme-secondary;
-    /deep/ &--link {
-      color: $theme-secondary;
+    color: var(--theme-secondary);
+    :deep &--link {
+      color: var(--theme-secondary);
       text-decoration: underline;
     }
   }

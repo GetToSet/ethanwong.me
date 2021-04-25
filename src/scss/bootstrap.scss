@@ -4,4 +4,11 @@
 $font-family-zh: "PingFangSC-Regular", "PingFang SC", "Microsoft YaHei";
 $font-family-base: $font-family-zh, $font-family-sans-serif;
 
-@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";

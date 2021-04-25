@@ -25,16 +25,16 @@ export default {
   &__link {
     padding: 4px;
     margin: 2px;
-    color: $theme-text;
+    color: var(--theme-text);
     text-decoration: none;
 
     &--highlight {
-      color: $theme-highlight;
+      color: var(--theme-highlight);
     }
 
     &:hover {
-      color: $theme-inverse;
-      background: $theme-highlight;
+      color: var(--theme-inverse);
+      background: var(--theme-highlight);
     }
   }
 }

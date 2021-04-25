@@ -61,8 +61,10 @@ export default {
     top: 0;
     left: 0;
 
-    width: 100vw;
-    height: 100vh;
+    margin: $page-border-width;
+
+    width: calc(100vw - 2 * #{$page-border-width});
+    height: calc(100vh - 2 * #{$page-border-width});
 
     &-enter-from,
     &-leave-to {
