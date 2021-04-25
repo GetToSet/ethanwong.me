@@ -121,7 +121,7 @@ export default {
         href="https://ethanwong.me/"
         alt="ethanwong.me"
         title="ethanwong.me"
-        >ethanwong.cn</a
+        >ethanwong.me</a
       >
       `;
     },
