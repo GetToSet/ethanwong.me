@@ -7,12 +7,6 @@
       "color": "#24292e"
     },
     {
-      "title": "Dribbble",
-      "icon": "dribbble",
-      "link": "https://dribbble.com/GetToSet/",
-      "color": "#ea4c89"
-    },
-    {
       "title": "Unsplash",
       "icon": "unsplash",
       "link": "https://unsplash.com/@ethanwong/",
@@ -35,6 +29,12 @@
       "icon": "twitter",
       "link": "https://twitter.com/e1hanw0ng/",
       "color": "#1da1f2"
+    },
+    {
+      "title": "Dribbble",
+      "icon": "dribbble",
+      "link": "https://dribbble.com/GetToSet/",
+      "color": "#ea4c89"
     }
   ],
   "zh": [
@@ -45,28 +45,28 @@
       "color": "#24292e"
     },
     {
-      "title": "Dribbble",
-      "icon": "dribbble",
-      "link": "https://dribbble.com/GetToSet/",
-      "color": "#ea4c89"
-    },
-    {
       "title": "Unsplash",
       "icon": "unsplash",
       "link": "https://unsplash.com/@ethanwong/",
       "color": "#111"
     },
     {
-      "title": "Twitter",
-      "icon": "twitter",
-      "link": "https://twitter.com/e1hanw0ng/",
-      "color": "#1da1f2"
+      "title": "Dribbble",
+      "icon": "dribbble",
+      "link": "https://dribbble.com/GetToSet/",
+      "color": "#ea4c89"
     },
     {
       "title": "微博",
       "icon": "weibo",
       "link": "https://weibo.com/u/6583082979/",
       "color": "#e6162d"
+    },
+    {
+      "title": "Twitter",
+      "icon": "twitter",
+      "link": "https://twitter.com/e1hanw0ng/",
+      "color": "#1da1f2"
     },
     {
       "title": "即刻",
