@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>unsplash</title>
+    <g id="unsplash" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M160,144 L160,0 L352,0 L352,144 L160,144 Z M352,224 L512,224 L512,512 L0,512 L0,224 L160,224 L160,368 L352,368 L352,224 Z" id="形状" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>
