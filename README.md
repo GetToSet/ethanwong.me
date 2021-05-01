@@ -1,24 +1,3 @@
-# ethanwong-me-vue
+# ethanwong.me
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Source code for [ethanwong.me](https://ethanwong.me), my personal home page, built with [Vue 3](https://v3.vuejs.org/) and [Bootstrap](https://getbootstrap.com/).
