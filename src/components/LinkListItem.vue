@@ -13,6 +13,7 @@
       :alt="link.title"
       :title="link.title"
       :style="colorStyle"
+      @click.prevent="onLinkClick(link.link)"
       @mouseenter="isActive = true"
       @mouseleave="isActive = false"
     >
@@ -21,28 +22,51 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, ref, computed, PropType } from "vue";
+import { Link } from "./LinkList.vue";
 import Iconfont from "./Iconfont.vue";
 
-export default {
+export default defineComponent({
   components: { Iconfont },
-  props: ["link"],
-  data() {
-    return {
-      isActive: false,
-    };
-  },
-  computed: {
-    colorStyle() {
-      return {
-        color: this.isActive ? "white" : this.link.color,
-        borderColor: this.isActive ? "white" : this.link.color,
-        backgroundColor: this.isActive ? this.link.color : "inherit",
-        zIndex: this.isActive ? 2 : 0,
-      };
+  props: {
+    link: {
+      type: Object as PropType<Link>,
+      required: true,
     },
   },
-};
+  setup(props) {
+    const isActive = ref(false);
+    const colorStyle = computed(() => {
+      return {
+        color: isActive.value ? "white" : props.link.color,
+        borderColor: isActive.value ? "white" : props.link.color,
+        backgroundColor: isActive.value ? props.link.color : "inherit",
+        zIndex: isActive.value ? 2 : 0,
+      };
+    });
+    return {
+      isActive,
+      colorStyle,
+    };
+  },
+  methods: {
+    onLinkClick(url: string) {
+      try {
+        gtag("event", "click", {
+          event_category: "outbound",
+          event_label: url,
+          transport_type: "beacon",
+          event_callback: function () {
+            document.location.href = url;
+          },
+        });
+      } catch (error) {
+        document.location.href = url;
+      }
+    },
+  },
+});
 </script>
 
 <style scoped lang="scss">

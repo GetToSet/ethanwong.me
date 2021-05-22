@@ -2,14 +2,15 @@
   <HomePage />
 </template>
 
-<script>
-import HomePage from "./pages/HomePage.vue";
+<script lang="ts">
+import { defineComponent } from "vue";
+import HomePage from "@/pages/HomePage.vue";
 
-export default {
+export default defineComponent({
   components: {
     HomePage,
   },
-};
+});
 </script>
 
 <style lang="scss">

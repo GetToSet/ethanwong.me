@@ -1,10 +1,13 @@
 <template>
-  <span :class="['iconfont', `icon-${name}`]" :style="{ fontSize: fontSize }" />
+  <span
+    :class="['iconfont', `icon${name ? `-${name}` : ''}`]"
+    :style="{ fontSize: fontSize }"
+  />
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  props: ["name", "fontSize"],
+  props: { name: String, fontSize: String },
 };
 </script>
 

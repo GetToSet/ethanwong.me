@@ -6,20 +6,29 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, computed } from "vue";
 import LinkListItem from "@/components/LinkListItem.vue";
 
-import links from "@/assets/links.json";
+const { default: allLinks }: { default: { [key: string]: Link[] } } =
+  await import("@/assets/links.json");
 
-export default {
-  props: ["currentLanguage"],
+export interface Link {
+  title: string;
+  icon: string;
+  link: string;
+  color: string;
+}
+
+export default defineComponent({
+  props: { currentLanguage: { type: String, required: true } },
   components: { LinkListItem },
-  computed: {
-    links() {
-      return links[this.currentLanguage] || [];
-    },
+  setup(props) {
+    return {
+      links: computed(() => allLinks[props.currentLanguage] || []),
+    };
   },
-};
+});
 </script>
 
 <style scoped lang="scss">

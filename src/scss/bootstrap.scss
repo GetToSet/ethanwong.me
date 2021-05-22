@@ -1,14 +1,14 @@
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
+@import "~/bootstrap/scss/_functions.scss";
+@import "~/bootstrap/scss/_variables.scss";
 
 $font-family-zh: "PingFangSC-Regular", "PingFang SC", "Microsoft YaHei";
 $font-family-base: $font-family-zh, $font-family-sans-serif;
 
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/root";
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/alert";
-@import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/print";
+@import "~/bootstrap/scss/_mixins.scss";
+@import "~/bootstrap/scss/_root.scss";
+@import "~/bootstrap/scss/_reboot.scss";
+@import "~/bootstrap/scss/_type.scss";
+@import "~/bootstrap/scss/_grid.scss";
+@import "~/bootstrap/scss/_alert.scss";
+@import "~/bootstrap/scss/_utilities.scss";
+@import "~/bootstrap/scss/_print.scss";

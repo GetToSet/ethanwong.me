@@ -36,79 +36,80 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, computed, watch } from "vue";
+
 import LanguageChooser from "@/components/LanguageChooser.vue";
 import TypeIt from "@/components/TypeIt.vue";
 import LinkList from "@/components/LinkList.vue";
 
-export default {
+export default defineComponent({
   components: { LanguageChooser, TypeIt, LinkList },
-  data() {
-    return {
-      typeItProps: {
-        strings: [
-          "a full-time iOS & Mac developer.",
-          "a self-taught frontend developer.",
-          "a graphics & UI design enthusiast.",
-          "a newcomer to photography.",
-          "a lover of coffee.",
-        ],
-        lifeLike: true,
-        loop: true,
-        cursorSpeed: 200,
-        speed: 100,
-        deleteSpeed: 50,
-        nextStringDelay: 750,
-        breakLines: false,
-      },
-      currentLanguage: "en",
-      showsMigrationTip: false,
-      beianId: null,
+  setup() {
+    const typeItProps = {
+      strings: [
+        "a full-time iOS & Mac developer.",
+        "a self-taught frontend developer.",
+        "a graphics & UI design enthusiast.",
+        "a newcomer to photography.",
+        "a lover of coffee.",
+      ],
+      lifeLike: true,
+      loop: true,
+      cursorSpeed: 200,
+      speed: 100,
+      deleteSpeed: 50,
+      nextStringDelay: 750,
+      breakLines: false,
     };
-  },
-  mounted() {
-    switch (location.host) {
-      case "busybunny.xyz": {
-        this.currentLanguage = "zh";
-        this.beianId = 1;
-        this.showsMigrationTip = true;
-        break;
-      }
-      case "busybunny.cn": {
-        this.currentLanguage = "zh";
-        this.beianId = 2;
-        this.showsMigrationTip = true;
-        break;
-      }
-      case "gettoset.cn": {
-        this.currentLanguage = "zh";
-        this.beianId = 3;
-        break;
-      }
-      case "ethanwong.cn": {
-        this.currentLanguage = "zh";
-        this.beianId = 4;
-        break;
-      }
-      case "busybunny.me": {
-        this.showsMigrationTip = true;
-        break;
-      }
-      // case "localhost:8080": {
-      //   this.currentLanguage = "zh";
-      //   this.beianId = 4;
-      //   this.showsMigrationTip = true;
-      //   break;
-      // }
-    }
-    if (this.currentLanguage === "zh") {
-      document.title = "Ethan 的个人主页";
-    }
-  },
-  computed: {
-    migrationTip() {
-      return this.currentLanguage === "zh"
-        ? `
+
+    const host = computed(() => location.host);
+
+    const currentLanguage = computed(() =>
+      ["busybunny.xyz", "busybunny.cn", "gettoset.cn", "ethanwong.cn"].includes(
+        host.value
+      )
+        ? "zh"
+        : "en"
+    );
+
+    watch(currentLanguage, (newVal) => {
+      document.title =
+        newVal === "zh" ? "Ethan 的个人主页" : "Ethan's Homepage";
+    });
+
+    const showsMigrationTip = computed(() =>
+      ["busybunny.xyz", "busybunny.cn", "gettoset.cn"].includes(host.value)
+        ? true
+        : false
+    );
+    const beianId = computed(
+      () =>
+        ({
+          "busybunny.xyz": 1,
+          "busybunny.cn": 2,
+          "gettoset.cn": 3,
+          "ethanwong.cn": 4,
+        }[host.value] || null)
+    );
+
+    const beianDescription = computed(
+      () => `浙ICP备19010471号${beianId.value ? "-" + beianId.value : ""}`
+    );
+
+    return {
+      typeItProps,
+      currentLanguage,
+      showsMigrationTip,
+
+      welcomeTitle: computed(() =>
+        currentLanguage.value === "zh"
+          ? "你好，我是 Ethan。"
+          : "Hi, I'm Ethan Wong."
+      ),
+      migrationTip: computed(() =>
+        currentLanguage.value === "zh"
+          ? `
       ${location.host} 已经迁移到 <a
         href="https://ethanwong.cn/"
         alt="ethanwong.cn"
@@ -116,26 +117,18 @@ export default {
         >ethanwong.cn</a
       >
       `
-        : `
+          : `
       ${location.host} has been moved to <a
         href="https://ethanwong.me/"
         alt="ethanwong.me"
         title="ethanwong.me"
         >ethanwong.me</a
       >
-      `;
-    },
-    welcomeTitle() {
-      return this.currentLanguage === "zh"
-        ? "你好，我是 Ethan。"
-        : "Hi, I'm Ethan Wong.";
-    },
-    beianDescription() {
-      return `浙ICP备19010471号${this.beianId ? "-" + this.beianId : ""}`;
-    },
-    footerContent() {
-      if (this.currentLanguage === "en") {
-        return `
+      `
+      ),
+      footerContent: computed(() =>
+        currentLanguage.value === "en"
+          ? `
         Copyright © ${new Date().getFullYear()}
         <a
           class="homepage__footer--link"
@@ -144,9 +137,8 @@ export default {
           title="e1hanw0ng@gmail.com"
           >Ethan Wong</a
         >, All rights reserved.
-        `;
-      } else {
-        return `
+        `
+          : `
         版权所有 © ${new Date().getFullYear()}
         <a
           class="homepage__footer--link"
@@ -159,22 +151,22 @@ export default {
         <a
           class="homepage__footer--link"
           href="https://beian.miit.gov.cn/"
-          alt="${this.beianDescription}"
-          title="${this.beianDescription}"
+          alt="${beianDescription.value}"
+          title="${beianDescription.value}"
         >
-          ${this.beianDescription}
+          ${beianDescription.value}
         </a>
-        `;
-      }
-    },
+        `
+      ),
+    };
   },
-};
+});
 </script>
 
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Courier+Prime&display=swap");
-@import "@/scss/mixins/stripe-background";
+@import "@/scss/mixins/stripe-background.scss";
 
 $handwave-degree: -15deg;
 

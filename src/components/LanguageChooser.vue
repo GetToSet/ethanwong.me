@@ -14,10 +14,16 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ["selectedLanguage"],
-};
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  props: {
+    selectedLanguage: {
+      type: String,
+    },
+  },
+});
 </script>
 
 <style scoped lang="scss">
