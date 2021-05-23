@@ -4,7 +4,7 @@
       <div
         class="link-item__mockup"
         v-if="isActive"
-        :style="{ backgroundColor: link.color }"
+        :style="{ backgroundColor: coverColor }"
       ></div>
     </transition>
     <a
@@ -37,17 +37,25 @@ export default defineComponent({
   },
   setup(props) {
     const isActive = ref(false);
+    const coverColor = computed(
+      () => props.link.activeBackgroundColor || props.link.color
+    );
     const colorStyle = computed(() => {
       return {
-        color: isActive.value ? "white" : props.link.color,
-        borderColor: isActive.value ? "white" : props.link.color,
-        backgroundColor: isActive.value ? props.link.color : "inherit",
+        color: isActive.value
+          ? props.link.activeColor || "white"
+          : props.link.color,
+        borderColor: isActive.value
+          ? props.link.activeColor || "white"
+          : props.link.color,
+        backgroundColor: isActive.value ? coverColor : "inherit",
         zIndex: isActive.value ? 2 : 0,
       };
     });
     return {
       isActive,
       colorStyle,
+      coverColor,
     };
   },
   methods: {

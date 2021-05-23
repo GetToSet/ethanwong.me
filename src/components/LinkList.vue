@@ -10,14 +10,16 @@
 import { defineComponent, computed } from "vue";
 import LinkListItem from "@/components/LinkListItem.vue";
 
-const { default: allLinks }: { default: { [key: string]: Link[] } } =
-  await import("@/assets/links.json");
+import _allLinks from "@/assets/links.json";
+const allLinks: { [key: string]: Link[] } = _allLinks;
 
 export interface Link {
   title: string;
   icon: string;
   link: string;
   color: string;
+  activeColor?: string;
+  activeBackgroundColor?: string;
 }
 
 export default defineComponent({

@@ -4,19 +4,25 @@
       "title": "GitHub",
       "icon": "github",
       "link": "https://github.com/GetToSet/",
-      "color": "#24292e"
+      "color": "var(--link-default)",
+      "activeColor": "var(--link-white)",
+      "activeBackgroundColor": "var(--link-black)"
     },
     {
       "title": "Unsplash",
       "icon": "unsplash",
       "link": "https://unsplash.com/@ethanwong/",
-      "color": "#111"
+      "color": "var(--link-default)",
+      "activeColor": "var(--link-white)",
+      "activeBackgroundColor": "var(--link-black)"
     },
     {
       "title": "Instagram",
       "icon": "instagram",
       "link": "https://instagram.com/gettoset/",
-      "color": "#262626"
+      "color": "var(--link-default)",
+      "activeColor": "var(--link-white)",
+      "activeBackgroundColor": "var(--link-black)"
     },
     {
       "title": "Facebook",
@@ -42,13 +48,17 @@
       "title": "GitHub",
       "icon": "github",
       "link": "https://github.com/GetToSet/",
-      "color": "#24292e"
+      "color": "var(--link-default)",
+      "activeColor": "var(--link-white)",
+      "activeBackgroundColor": "var(--link-black)"
     },
     {
       "title": "Unsplash",
       "icon": "unsplash",
       "link": "https://unsplash.com/@ethanwong/",
-      "color": "#111"
+      "color": "var(--link-default)",
+      "activeColor": "var(--link-white)",
+      "activeBackgroundColor": "var(--link-black)"
     },
     {
       "title": "Dribbble",

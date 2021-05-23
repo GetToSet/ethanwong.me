@@ -10,6 +10,10 @@ $page-border-width: 12px;
   --stripe-red: #e71d36;
   --stripe-yellow: #ff9f1c;
   --stripe-green: #2ec4b6;
+
+  --link-default: var(--link-black);
+  --link-black: #111;
+  --link-white: #fefffe;
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -19,5 +23,7 @@ $page-border-width: 12px;
     --theme-inverse: #f5f5f5;
     --theme-highlight: #e71d36;
     --theme-background: #274c77;
+
+    --link-default: var(--link-white);
   }
 }
