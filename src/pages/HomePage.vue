@@ -19,9 +19,9 @@
         <h1 class="homepage__title mb-2">
           <img
             src="@/assets/handwave.png"
+            draggable="false"
             class="homepage__handwave d-inline-block"
-          />
-          {{ welcomeTitle }}
+          />{{ welcomeTitle }}
         </h1>
         <p class="homepage__intro mb-3">I'm <TypeIt v-bind="typeItProps" /></p>
       </main>
@@ -167,6 +167,7 @@ export default defineComponent({
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Courier+Prime&display=swap");
 @import "@/scss/mixins/stripe-background.scss";
+@import "@/scss/mixins/no-select.scss";
 
 $handwave-degree: -15deg;
 
@@ -217,6 +218,8 @@ $handwave-degree: -15deg;
     height: 1em;
     margin-bottom: 0.1em;
     animation: handwave 3s ease-in-out infinite;
+    @include no-select;
+    margin-right: 0.2em;
   }
 
   &__intro {
