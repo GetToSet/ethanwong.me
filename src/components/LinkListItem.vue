@@ -13,7 +13,6 @@
       :alt="link.title"
       :title="link.title"
       :style="colorStyle"
-      @click.prevent="onLinkClick(link.link)"
       @mouseenter="isActive = true"
       @mouseleave="isActive = false"
     >
@@ -57,22 +56,6 @@ export default defineComponent({
       colorStyle,
       coverColor,
     };
-  },
-  methods: {
-    onLinkClick(url: string) {
-      try {
-        gtag("event", "click", {
-          event_category: "outbound",
-          event_label: url,
-          transport_type: "beacon",
-          event_callback: function () {
-            document.location.href = url;
-          },
-        });
-      } catch (error) {
-        document.location.href = url;
-      }
-    },
   },
 });
 </script>
