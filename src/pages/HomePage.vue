@@ -25,7 +25,7 @@
         </h1>
         <p class="homepage__intro mb-3">I'm <TypeIt v-bind="typeItProps" /></p>
       </main>
-      <LinkList :currentLanguage="currentLanguage" />
+      <LinkList class="mt-3" :currentLanguage="currentLanguage" />
       <footer
         class="homepage__footer position-absolute small color-gray"
         style="bottom: 12px"
@@ -168,6 +168,7 @@ export default defineComponent({
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Courier+Prime&display=swap");
 @import "@/scss/mixins/stripe-background.scss";
 @import "@/scss/mixins/no-select.scss";
+@import "@/scss/mixins/dark-mode.scss";
 
 $handwave-degree: -15deg;
 
@@ -225,6 +226,8 @@ $handwave-degree: -15deg;
   &__intro {
     font-size: 32px;
     font-family: "Courier Prime", monospace;
+    line-height: 1.2em;
+    height: 2.4em;
   }
 
   &__footer {
@@ -233,6 +236,9 @@ $handwave-degree: -15deg;
     :deep(a) {
       color: var(--theme-secondary);
       text-decoration: underline;
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 
