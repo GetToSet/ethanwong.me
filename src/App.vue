@@ -15,4 +15,5 @@ export default defineComponent({
 
 <style lang="scss">
 @import "@/scss/bootstrap.scss";
+@import "@/scss/fonts.scss";
 </style>
