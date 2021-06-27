@@ -23,7 +23,9 @@
             class="homepage__handwave d-inline-block"
           />{{ welcomeTitle }}
         </h1>
-        <p class="homepage__intro mb-3">I'm <TypeIt v-bind="typeItProps" /></p>
+        <p class="homepage__intro mb-3 mx-2">
+          I'm <TypeIt v-bind="typeItProps" />
+        </p>
       </main>
       <LinkList class="mt-3" :currentLanguage="currentLanguage" />
       <footer
@@ -50,9 +52,10 @@ export default defineComponent({
       strings: [
         "a full-time iOS & Mac developer.",
         "a self-taught frontend developer.",
-        "a graphics & UI design enthusiast.",
+        "a product & UI design enthusiast.",
         "a newcomer to photography.",
         "a lover of coffee.",
+        "foolish to ideas, hungry to adventures.",
       ],
       lifeLike: true,
       loop: true,
@@ -225,7 +228,7 @@ $handwave-degree: -15deg;
     font-size: 32px;
     font-family: "Courier Prime", monospace;
     line-height: 1.2em;
-    height: 2.4em;
+    height: 2.8em;
   }
 
   &__footer {
