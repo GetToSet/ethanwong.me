@@ -167,7 +167,6 @@ export default defineComponent({
 // @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 @import "@/scss/mixins/stripe-background.scss";
 @import "@/scss/mixins/no-select.scss";
-@import "@/scss/mixins/dark-mode.scss";
 
 $handwave-degree: -15deg;
 
