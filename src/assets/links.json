@@ -1,7 +1,7 @@
 {
   "en": [
     {
-      "title": "GitHub",
+      "title": "GitHub @GetToSet",
       "icon": "github",
       "link": "https://github.com/GetToSet/",
       "color": "var(--link-default)",
@@ -9,7 +9,7 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
-      "title": "Unsplash",
+      "title": "Unsplash @ethanwong",
       "icon": "unsplash",
       "link": "https://unsplash.com/@ethanwong/",
       "color": "var(--link-default)",
@@ -17,7 +17,7 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
-      "title": "Instagram",
+      "title": "Instagram @gettoset",
       "icon": "instagram",
       "link": "https://instagram.com/gettoset/",
       "color": "var(--link-default)",
@@ -25,19 +25,19 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
-      "title": "Facebook",
+      "title": "Facebook @e1hanw0ng",
       "icon": "facebook",
       "link": "https://www.facebook.com/e1hanw0ng/",
       "color": "#1877f2"
     },
     {
-      "title": "Twitter",
+      "title": "Twitter @e1hanw0ng",
       "icon": "twitter",
       "link": "https://twitter.com/e1hanw0ng/",
       "color": "#1da1f2"
     },
     {
-      "title": "Dribbble",
+      "title": "Dribbble @GetToSet",
       "icon": "dribbble",
       "link": "https://dribbble.com/GetToSet/",
       "color": "#ea4c89"
@@ -45,7 +45,7 @@
   ],
   "zh": [
     {
-      "title": "GitHub",
+      "title": "GitHub @GetToSet",
       "icon": "github",
       "link": "https://github.com/GetToSet/",
       "color": "var(--link-default)",
@@ -53,7 +53,7 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
-      "title": "Unsplash",
+      "title": "Unsplash @ethanwong",
       "icon": "unsplash",
       "link": "https://unsplash.com/@ethanwong/",
       "color": "var(--link-default)",
@@ -61,25 +61,25 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
-      "title": "Dribbble",
+      "title": "Dribbble @GetToSet",
       "icon": "dribbble",
       "link": "https://dribbble.com/GetToSet/",
       "color": "#ea4c89"
     },
     {
-      "title": "微博",
+      "title": "微博 @叫我小兔仔",
       "icon": "weibo",
       "link": "https://weibo.com/u/6583082979/",
       "color": "#e6162d"
     },
     {
-      "title": "Twitter",
+      "title": "Twitter @e1hanw0ng",
       "icon": "twitter",
       "link": "https://twitter.com/e1hanw0ng/",
       "color": "#1da1f2"
     },
     {
-      "title": "即刻",
+      "title": "即刻 @兔仔很忙",
       "icon": "jike",
       "link": "https://web.okjike.com/u/6AA96646-68E7-4614-843F-D0F8D271FDB6/",
       "color": "#ffe411"
