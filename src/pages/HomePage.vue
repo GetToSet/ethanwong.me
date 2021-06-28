@@ -16,7 +16,7 @@
         <span v-html="migrationTip" />
       </div>
       <main>
-        <h1 class="homepage__title mb-2">
+        <h1 class="homepage__title mb-2 mx-2">
           <img
             src="@/assets/handwave.png"
             draggable="false"
@@ -66,7 +66,7 @@ export default defineComponent({
       breakLines: false,
     };
 
-    const host = computed(() => location.host);
+    const host = computed(() => "ethanwong.cn");
 
     const currentLanguage = computed(() =>
       ["busybunny.xyz", "busybunny.cn", "gettoset.cn", "ethanwong.cn"].includes(
@@ -76,10 +76,16 @@ export default defineComponent({
         : "en"
     );
 
-    watch(currentLanguage, (newVal) => {
-      document.title =
-        newVal === "zh" ? "Ethan 的个人主页" : "Ethan's Homepage";
-    });
+    watch(
+      currentLanguage,
+      (newVal) => {
+        document.title =
+          newVal === "zh" ? "Ethan 的个人主页" : "Ethan's Homepage";
+      },
+      {
+        immediate: true,
+      }
+    );
 
     const showsMigrationTip = computed(() =>
       ["busybunny.xyz", "busybunny.cn", "gettoset.cn"].includes(host.value)
@@ -167,7 +173,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-// @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+@import "~/rfs/scss";
 @import "@/scss/mixins/stripe-background.scss";
 @import "@/scss/mixins/no-select.scss";
 
@@ -212,7 +218,7 @@ $handwave-degree: -15deg;
 
   &__title {
     margin: 0;
-    font-size: 64px;
+    @include rfs(64px);
     font-family: "Baloo 2", sans-serif;
   }
 
@@ -225,7 +231,7 @@ $handwave-degree: -15deg;
   }
 
   &__intro {
-    font-size: 32px;
+    @include rfs(32px);
     font-family: "Courier Prime", monospace;
     line-height: 1.2em;
     height: 2.8em;

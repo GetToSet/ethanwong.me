@@ -33,7 +33,6 @@ export default defineComponent({
     margin: 2px;
     color: var(--theme-text);
     text-decoration: none;
-    font-weight: bold;
 
     &--highlight {
       color: var(--theme-highlight);

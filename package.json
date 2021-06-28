@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
+    "rfs": "^9.0.4",
     "typeit": "^7.0.4",
     "vue": "^3.0.5"
   },

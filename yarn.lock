@@ -1244,6 +1244,13 @@ reusify@^1.0.4:
   resolved "https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
+rfs@^9.0.4:
+  version "9.0.4"
+  resolved "https://registry.yarnpkg.com/rfs/-/rfs-9.0.4.tgz#20bf4e6feaafef5bfbdc08385dca0d26fd8d035a"
+  integrity sha512-n8XGVpmqDv/fIIRx5NZ58/5HVFX+i29OmxzxVmQOwKuKbE9TOvfjUsDsLwQNcN226yumNgPMy1Pfdf31s25Ypw==
+  dependencies:
+    postcss-value-parser "^4.1.0"
+
 rimraf@^3.0.2:
   version "3.0.2"
   resolved "https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz"
