@@ -34,10 +34,18 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+$links-margin-x: 8px;
+$link-item-width: 70px + 2 * 6px;
+$links-margin-screen: 2 * ($links-margin-x + $page-border-width);
+
 .links {
   margin-bottom: 12px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media (min-width: 3 * $link-item-width + $links-margin-screen) and (max-width: 6 * $link-item-width + $links-margin-screen) {
+    width: 3 * $link-item-width;
+  }
 }
 </style>
