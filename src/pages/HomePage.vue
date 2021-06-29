@@ -66,7 +66,7 @@ export default defineComponent({
       breakLines: false,
     };
 
-    const host = computed(() => "ethanwong.cn");
+    const host = computed(() => location.host);
 
     const currentLanguage = computed(() =>
       ["busybunny.xyz", "busybunny.cn", "gettoset.cn", "ethanwong.cn"].includes(
@@ -234,7 +234,7 @@ $handwave-degree: -15deg;
     @include rfs(32px);
     font-family: "Courier Prime", monospace;
     line-height: 1.2em;
-    height: 2.8em;
+    min-height: 2.8em;
   }
 
   &__footer {
