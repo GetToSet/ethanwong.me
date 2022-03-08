@@ -92,6 +92,7 @@ export default defineComponent({
         ? true
         : false
     );
+
     const beianId = computed(
       () =>
         ({
@@ -138,7 +139,7 @@ export default defineComponent({
       footerContent: computed(() =>
         currentLanguage.value === "en"
           ? `
-        Copyright © ${new Date().getFullYear()}
+        Copyright © 2020-${new Date().getFullYear()}
         <a
           class="homepage__footer--link"
           href="mailto:e1hanw0ng@gmail.com"
@@ -148,7 +149,7 @@ export default defineComponent({
         >, All rights reserved.
         `
           : `
-        版权所有 © ${new Date().getFullYear()}
+        版权所有 © 2020-${new Date().getFullYear()}
         <a
           class="homepage__footer--link"
           href="mailto:e1hanw0ng@gmail.com"

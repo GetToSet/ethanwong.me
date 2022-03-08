@@ -71,6 +71,7 @@ export default defineComponent({
 
   &__mockup {
     z-index: 1;
+    pointer-events: none;
 
     position: fixed;
     top: 0;

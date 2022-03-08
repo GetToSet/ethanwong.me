@@ -10,6 +10,13 @@ export default defineComponent({
   components: {
     HomePage,
   },
+  created() {
+    window.addEventListener("pageshow", function (event) {
+      if (event.persisted) {
+        window.location.reload();
+      }
+    });
+  },
 });
 </script>
 
