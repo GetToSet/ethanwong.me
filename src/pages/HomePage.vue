@@ -5,10 +5,17 @@
       style="top: 0"
     />
     <div class="content">
-      <LanguageChooser
-        class="homepage__lang-chooser"
-        :selectedLanguage="currentLanguage"
-      />
+      <div class="homepage__navbar">
+        <NavMenu
+          class="homepage__navbar__nav-menu"
+          :items="navMenuItems"
+          :selectedLanguage="currentLanguage"
+        />
+        <LanguageChooser
+          class="homepage__navbar__lang-chooser"
+          :selectedLanguage="currentLanguage"
+        />
+      </div>
       <div
         v-if="showsMigrationTip"
         class="alert alert-info homepage__migration-tip"
@@ -41,13 +48,38 @@
 <script lang="ts">
 import { defineComponent, computed, watch } from "vue";
 
+import NavMenu from "@/components/NavMenu.vue";
 import LanguageChooser from "@/components/LanguageChooser.vue";
 import TypeIt from "@/components/TypeIt.vue";
 import LinkList from "@/components/LinkList.vue";
 
 export default defineComponent({
-  components: { LanguageChooser, TypeIt, LinkList },
+  components: { NavMenu, LanguageChooser, TypeIt, LinkList },
   setup() {
+    const navMenuItems = [
+      {
+        title: "语雀",
+        titleEn: "Yuque",
+        icon: "yuque",
+        link: "https://www.yuque.com/gettoset/kb/",
+        zhBadge: true,
+      },
+      {
+        title: "书签",
+        titleEn: "Bookmarks",
+        icon: "bookmarks",
+        link: "https://s.gettoset.cn/bookmarks",
+        zhBadge: true,
+      },
+      {
+        title: "宇宙听众",
+        titleEn: "Space Listener",
+        icon: "xyzfm",
+        link: "https://www.xiaoyuzhoufm.com/user/5f2a0381e0f5e723bb85e768/",
+        zhBadge: true,
+      },
+    ];
+
     const typeItProps = {
       strings: [
         "a full-time iOS & Mac developer.",
@@ -103,6 +135,7 @@ export default defineComponent({
     );
 
     return {
+      navMenuItems,
       typeItProps,
       currentLanguage,
       showsMigrationTip,
@@ -206,10 +239,19 @@ $handwave-degree: -15deg;
     );
   }
 
-  &__lang-chooser {
+  &__navbar {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 0;
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    &__nav-menu {
+      margin-right: auto;
+      @media (max-width: 480px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   }
 
   &__title {
