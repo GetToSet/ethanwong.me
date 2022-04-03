@@ -69,9 +69,7 @@ export default defineComponent({
     const host = computed(() => location.host);
 
     const currentLanguage = computed(() =>
-      ["busybunny.xyz", "busybunny.cn", "gettoset.cn", "ethanwong.cn"].includes(
-        host.value
-      )
+      ["busybunny.xyz", "gettoset.cn", "ethanwong.cn"].includes(host.value)
         ? "zh"
         : "en"
     );
@@ -88,16 +86,13 @@ export default defineComponent({
     );
 
     const showsMigrationTip = computed(() =>
-      ["busybunny.xyz", "busybunny.cn", "gettoset.cn"].includes(host.value)
-        ? true
-        : false
+      ["busybunny.xyz", "gettoset.cn"].includes(host.value) ? true : false
     );
 
     const beianId = computed(
       () =>
         ({
           "busybunny.xyz": 1,
-          "busybunny.cn": 2,
           "gettoset.cn": 3,
           "ethanwong.cn": 4,
         }[host.value] || null)
