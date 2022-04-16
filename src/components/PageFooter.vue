@@ -26,14 +26,14 @@ import ZhBadge from "@/components/ZhBadge.vue";
 const footerLinkItems = [
   {
     id: "source",
-    title: "源码",
-    titleEn: "Source",
+    title: "GitHub",
+    titleEn: "GitHub",
     link: "https://github.com/GetToSet/ethanwong.me/",
     zhBadge: false,
   },
   {
     id: "gallery",
-    title: "画廊",
+    title: "Gallery",
     titleEn: "Gallery",
     link: "http://static.ethanwong.me/gallery/",
     zhBadge: false,
