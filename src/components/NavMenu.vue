@@ -4,9 +4,7 @@
       <a class="nav-menu__link" :href="item.link">
         <Iconfont :name="item.icon" />
         {{ selectedLanguage == "zh" ? item.title : item.titleEn }}
-        <sup v-if="selectedLanguage != 'zh' && item.zhBadge"
-          ><abbr title="Content written in Simplified Chinese">*</abbr></sup
-        >
+        <ZhBadge v-if="selectedLanguage != 'zh' && item.zhBadge" />
       </a>
     </div>
   </div>
@@ -16,6 +14,7 @@
 import { defineComponent, PropType } from "vue";
 
 import Iconfont from "@/components/Iconfont.vue";
+import ZhBadge from "@/components/ZhBadge.vue";
 
 export interface NavMenuItem {
   title: string;
@@ -26,7 +25,7 @@ export interface NavMenuItem {
 }
 
 export default defineComponent({
-  components: { Iconfont },
+  components: { Iconfont, ZhBadge },
   props: {
     selectedLanguage: {
       type: String,
