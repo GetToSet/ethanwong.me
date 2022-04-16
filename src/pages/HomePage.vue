@@ -23,12 +23,12 @@
         <span v-html="migrationTip" />
       </div>
       <main>
-        <h1 class="homepage__title mb-2 mx-2 d-flex align-items-center">
+        <h1 class="homepage__title mb-2 mx-2">
           <img
             src="@/assets/handwave.png"
             draggable="false"
             class="homepage__handwave d-inline-block"
-          /><span>{{ welcomeTitle }}</span>
+          />{{ welcomeTitle }}
         </h1>
         <p class="homepage__intro mb-3 mx-2">
           I'm <TypeIt v-bind="typeItProps" />
