@@ -35,12 +35,7 @@
         </p>
       </main>
       <LinkList class="mt-3" :currentLanguage="currentLanguage" />
-      <footer
-        class="homepage__footer position-absolute small color-gray"
-        style="bottom: 12px"
-      >
-        <span v-html="footerContent" />
-      </footer>
+      <PageFooter :currentLanguage="currentLanguage" />
     </div>
   </div>
 </template>
@@ -52,9 +47,10 @@ import NavMenu from "@/components/NavMenu.vue";
 import LanguageChooser from "@/components/LanguageChooser.vue";
 import TypeIt from "@/components/TypeIt.vue";
 import LinkList from "@/components/LinkList.vue";
+import PageFooter from "@/components/PageFooter.vue";
 
 export default defineComponent({
-  components: { NavMenu, LanguageChooser, TypeIt, LinkList },
+  components: { NavMenu, LanguageChooser, TypeIt, LinkList, PageFooter },
   setup() {
     const navMenuItems = [
       {
@@ -98,6 +94,7 @@ export default defineComponent({
       breakLines: false,
     };
 
+    // TODO: Use hooks for this.
     const host = computed(() => location.host);
 
     const currentLanguage = computed(() =>
@@ -119,19 +116,6 @@ export default defineComponent({
 
     const showsMigrationTip = computed(() =>
       ["busybunny.xyz", "gettoset.cn"].includes(host.value) ? true : false
-    );
-
-    const beianId = computed(
-      () =>
-        ({
-          "busybunny.xyz": 1,
-          "gettoset.cn": 3,
-          "ethanwong.cn": 4,
-        }[host.value] || null)
-    );
-
-    const beianDescription = computed(
-      () => `浙ICP备19010471号${beianId.value ? "-" + beianId.value : ""}`
     );
 
     return {
@@ -163,38 +147,6 @@ export default defineComponent({
         >ethanwong.me</a
       >
       `
-      ),
-      footerContent: computed(() =>
-        currentLanguage.value === "en"
-          ? `
-        Copyright © 2020-${new Date().getFullYear()}
-        <a
-          class="homepage__footer--link"
-          href="mailto:e1hanw0ng@gmail.com"
-          alt="e1hanw0ng@gmail.com"
-          title="e1hanw0ng@gmail.com"
-          >Ethan Wong</a
-        >, All rights reserved.
-        `
-          : `
-        版权所有 © 2020-${new Date().getFullYear()}
-        <a
-          class="homepage__footer--link"
-          href="mailto:e1hanw0ng@gmail.com"
-          alt="e1hanw0ng@gmail.com"
-          title="e1hanw0ng@gmail.com"
-          >Ethan Wong</a
-        >，保留所有权利。
-        <br />
-        <a
-          class="homepage__footer--link"
-          href="https://beian.miit.gov.cn/"
-          alt="${beianDescription.value}"
-          title="${beianDescription.value}"
-        >
-          ${beianDescription.value}
-        </a>
-        `
       ),
     };
   },
