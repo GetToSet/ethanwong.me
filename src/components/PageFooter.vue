@@ -9,11 +9,11 @@
       v-if="footerLinkItems.length"
       class="d-flex justify-items-center list-unstyled m-0"
     >
-      <li v-for="item in footerLinkItems" :key="item.id">
+      <li v-for="(item, index) in footerLinkItems" :key="item.id">
         <a :href="item.link" class="px-1"
-          >{{ currentLanguage == "zh" ? item.title : item.titleEn }}
-          <ZhBadge v-if="currentLanguage != 'zh' && item.zhBadge"
-        /></a>
+          >{{ currentLanguage == "zh" ? item.title : item.titleEn
+          }}<ZhBadge v-if="currentLanguage != 'zh' && item.zhBadge" /></a
+        ><span v-if="index != footerLinkItems.length - 1">|</span>
       </li>
     </ul>
   </footer>
@@ -108,4 +108,8 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+hr {
+  border-color: var(--theme-secondary);
+}
+</style>

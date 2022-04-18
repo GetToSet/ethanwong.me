@@ -1,10 +1,14 @@
 <template>
   <div class="nav-menu">
     <div v-for="item in items" :key="item.icon" class="nav-menu__wrapper">
-      <a class="nav-menu__link" :href="item.link">
+      <a
+        class="nav-menu__link"
+        :href="item.link"
+        v-if="!(selectedLanguage !== 'zh' && item.hidesInNonZh)"
+      >
         <Iconfont :name="item.icon" />
-        {{ selectedLanguage == "zh" ? item.title : item.titleEn }}
-        <ZhBadge v-if="selectedLanguage != 'zh' && item.zhBadge" />
+        {{ selectedLanguage === "zh" ? item.title : item.titleEn }}
+        <ZhBadge v-if="selectedLanguage !== 'zh' && item.zhBadge" />
       </a>
     </div>
   </div>
@@ -22,6 +26,7 @@ export interface NavMenuItem {
   icon: string;
   link: string;
   zhBadge: boolean;
+  hidesInNonZh?: boolean;
 }
 
 export default defineComponent({
