@@ -39,11 +39,11 @@ const footerLinkItems = [
     zhBadge: false,
   },
   {
-    id: "notion",
-    title: "Notion",
-    titleEn: "Notion",
-    link: "https://ethanwong.notion.site/",
-    zhBadge: true,
+    id: "telegram",
+    title: "Concat",
+    titleEn: "Contact",
+    link: "https://t.me/gettoset/",
+    zhBadge: false,
   },
 ];
 

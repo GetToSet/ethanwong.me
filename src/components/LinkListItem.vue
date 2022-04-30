@@ -16,7 +16,13 @@
       @mouseenter="isActive = true"
       @mouseleave="isActive = false"
     >
-      <Iconfont :name="link.icon" :fontSize="'20px'" />
+      <div :style="{ position: 'relative' }">
+        <Iconfont :name="link.icon" :fontSize="'20px'" />
+        <ZhBadge
+          v-if="selectedLanguage !== 'zh' && link.zhBadge"
+          :style="{ position: 'absolute', right: '-8px' }"
+        />
+      </div>
     </a>
   </div>
 </template>
@@ -24,11 +30,16 @@
 <script lang="ts">
 import { defineComponent, ref, computed, PropType } from "vue";
 import { Link } from "./LinkList.vue";
+import ZhBadge from "./ZhBadge.vue";
 import Iconfont from "./Iconfont.vue";
 
 export default defineComponent({
-  components: { Iconfont },
+  components: { Iconfont, ZhBadge },
   props: {
+    selectedLanguage: {
+      type: String,
+      required: true,
+    },
     link: {
       type: Object as PropType<Link>,
       required: true,

@@ -13,6 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-notion:before {
+  content: "\e611";
+}
+
+.icon-earth:before {
+  content: "\e66f";
+}
+
 .icon-xyzfm:before {
   content: "\e8c1";
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="links">
     <div v-for="link in links" :key="link.icon">
-      <LinkListItem :link="link" />
+      <LinkListItem :link="link" :selectedLanguage="currentLanguage" />
     </div>
   </div>
 </template>
@@ -20,6 +20,7 @@ export interface Link {
   color: string;
   activeColor?: string;
   activeBackgroundColor?: string;
+  zhBadge?: boolean;
 }
 
 export default defineComponent({

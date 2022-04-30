@@ -25,10 +25,13 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
-      "title": "Facebook @e1hanw0ng",
-      "icon": "facebook",
-      "link": "https://www.facebook.com/e1hanw0ng/",
-      "color": "#1877f2"
+      "title": "Notion @ethanwong",
+      "icon": "notion",
+      "link": "https://ethanwong.notion.site/",
+      "color": "var(--link-default)",
+      "activeColor": "var(--link-white)",
+      "activeBackgroundColor": "var(--link-black)",
+      "zhBadge": true
     },
     {
       "title": "Twitter @e1hanw0ng",
@@ -67,10 +70,12 @@
       "color": "#ea4c89"
     },
     {
-      "title": "微博 @叫我小兔仔",
-      "icon": "weibo",
-      "link": "https://weibo.com/u/6583082979/",
-      "color": "#e6162d"
+      "title": "Notion @ethanwong",
+      "icon": "notion",
+      "link": "https://ethanwong.notion.site/",
+      "color": "var(--link-default)",
+      "activeColor": "var(--link-white)",
+      "activeBackgroundColor": "var(--link-black)"
     },
     {
       "title": "Twitter @e1hanw0ng",

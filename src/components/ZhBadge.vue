@@ -1,5 +1,5 @@
 <template>
-  <sup><abbr title="Content written in Simplified Chinese">*</abbr></sup>
+  <abbr title="Content written in Simplified Chinese"><sup>*</sup></abbr>
 </template>
 
 <script lang="ts">
