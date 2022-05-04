@@ -64,18 +64,18 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
-      "title": "Dribbble @GetToSet",
-      "icon": "dribbble",
-      "link": "https://dribbble.com/GetToSet/",
-      "color": "#ea4c89"
-    },
-    {
       "title": "Notion @ethanwong",
       "icon": "notion",
       "link": "https://ethanwong.notion.site/",
       "color": "var(--link-default)",
       "activeColor": "var(--link-white)",
       "activeBackgroundColor": "var(--link-black)"
+    },
+    {
+      "title": "Dribbble @GetToSet",
+      "icon": "dribbble",
+      "link": "https://dribbble.com/GetToSet/",
+      "color": "#ea4c89"
     },
     {
       "title": "Twitter @e1hanw0ng",
