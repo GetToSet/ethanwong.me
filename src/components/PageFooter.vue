@@ -40,7 +40,7 @@ const footerLinkItems = [
   },
   {
     id: "telegram",
-    title: "Concat",
+    title: "Contact",
     titleEn: "Contact",
     link: "https://t.me/gettoset/",
     zhBadge: false,
