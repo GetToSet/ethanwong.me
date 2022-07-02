@@ -4,9 +4,6 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  globals: {
-    gtag: "readonly",
-  },
   parserOptions: {
     parser: "@typescript-eslint/parser",
     ecmaVersion: 2021,
