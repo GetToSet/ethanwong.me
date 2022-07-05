@@ -11,21 +11,21 @@
   "dependencies": {
     "bootstrap": "^4.6.1",
     "rfs": "^9.0.6",
-    "typeit": "^8.2.0",
-    "vue": "^3.2.29"
+    "typeit": "^8.6.0",
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@types/node": "^12.20.42",
-    "@typescript-eslint/eslint-plugin": "^5.10.1",
-    "@typescript-eslint/parser": "^5.10.1",
-    "@vitejs/plugin-vue": "^2.1.0",
+    "@types/node": "^12.20.55",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "@vitejs/plugin-vue": "^2.3.3",
     "@vue/eslint-config-prettier": "^7.0.0",
-    "eslint": "^8.8.0",
-    "eslint-plugin-prettier": "^3.4.1",
-    "eslint-plugin-vue": "^8.4.0",
-    "prettier": "^2.5.1",
-    "sass": "^1.49.0",
-    "typescript": "^4.5.5",
-    "vite": "^2.7.13"
+    "eslint": "^8.19.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.1.1",
+    "prettier": "^2.7.1",
+    "sass": "^1.53.0",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.13"
   }
 }
