@@ -13,6 +13,50 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-gallery:before {
+  content: "\e615";
+}
+
+.icon-download:before {
+  content: "\e614";
+}
+
+.icon-location:before {
+  content: "\e613";
+}
+
+.icon-exposure:before {
+  content: "\e952";
+}
+
+.icon-copyright:before {
+  content: "\e612";
+}
+
+.icon-cc_by:before {
+  content: "\e600";
+}
+
+.icon-cc:before {
+  content: "\e601";
+}
+
+.icon-cc_sa:before {
+  content: "\e602";
+}
+
+.icon-cc_nc:before {
+  content: "\e603";
+}
+
+.icon-cc_nd:before {
+  content: "\e604";
+}
+
+.icon-cc0:before {
+  content: "\e605";
+}
+
 .icon-notion:before {
   content: "\e611";
 }
@@ -67,4 +111,8 @@
 
 .icon-weibo:before {
   content: "\e610";
+}
+
+.icon-unsplash-circle:before {
+  content: "\eab6";
 }

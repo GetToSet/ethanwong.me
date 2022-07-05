@@ -68,6 +68,14 @@ export default defineComponent({
         zhBadge: true,
       },
       {
+        title: "影集",
+        titleEn: "Gallery",
+        icon: "gallery",
+        link: "https://gallery.ethanwong.me/",
+        zhBadge: false,
+        hidesInNonZh: false,
+      },
+      {
         title: "宇宙听众",
         titleEn: "Space Listener",
         icon: "xyzfm",
