@@ -6,7 +6,10 @@
         :href="item.link"
         v-if="!(selectedLanguage !== 'zh' && item.hidesInNonZh)"
       >
-        <Iconfont :name="item.icon" />
+        <Iconfont
+          :name="item.icon"
+          :style="{ display: 'inline-block', width: '1.2rem' }"
+        />
         {{ selectedLanguage === "zh" ? item.title : item.titleEn }}
         <ZhBadge v-if="selectedLanguage !== 'zh' && item.zhBadge" />
       </a>
