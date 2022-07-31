@@ -1,9 +1,12 @@
 <template>
   <footer
     class="homepage__footer position-absolute small color-gray d-flex flex-column align-items-center"
-    style="bottom: 12px"
+    style="bottom: 12px; max-width: 85%"
   >
     <span v-html="footerContent" />
+    <div class="lang-note" v-if="currentLanguage != 'zh'">
+      * Content Written in Simplified Chinese<br />
+    </div>
     <hr class="w-100 my-2" />
     <ul
       v-if="footerLinkItems.length"
@@ -110,5 +113,14 @@ export default defineComponent({
 <style scoped lang="scss">
 hr {
   border-color: var(--theme-secondary);
+}
+.lang-note {
+  display: none;
+  font-size: 50%;
+}
+@media only screen and (hover: none) and (pointer: coarse) {
+  .lang-note {
+    display: unset;
+  }
 }
 </style>
