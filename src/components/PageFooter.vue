@@ -53,7 +53,6 @@ const host = computed(() => location.host);
 const beianId = computed(
   () =>
     ({
-      "busybunny.xyz": 1,
       "gettoset.cn": 3,
       "ethanwong.cn": 4,
     }[host.value] || null)

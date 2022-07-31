@@ -107,9 +107,7 @@ export default defineComponent({
     const host = computed(() => location.host);
 
     const currentLanguage = computed(() =>
-      ["busybunny.xyz", "gettoset.cn", "ethanwong.cn"].includes(host.value)
-        ? "zh"
-        : "en"
+      ["gettoset.cn", "ethanwong.cn"].includes(host.value) ? "zh" : "en"
     );
 
     watch(
@@ -124,7 +122,7 @@ export default defineComponent({
     );
 
     const showsMigrationTip = computed(() =>
-      ["busybunny.xyz", "gettoset.cn"].includes(host.value) ? true : false
+      ["gettoset.cn"].includes(host.value) ? true : false
     );
 
     return {
