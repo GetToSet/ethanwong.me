@@ -19,6 +19,11 @@
         ><span v-if="index != footerLinkItems.length - 1">|</span>
       </li>
     </ul>
+    <div>
+      <a href="https://www.buymeacoffee.com/gettoset" target="_blank"
+        >☕️ Buy me a coffee</a
+      >
+    </div>
   </footer>
 </template>
 
