@@ -75,14 +75,6 @@ export default defineComponent({
         zhBadge: false,
         hidesInNonZh: false,
       },
-      {
-        title: "宇宙听众",
-        titleEn: "Space Listener",
-        icon: "xyzfm",
-        link: "https://www.xiaoyuzhoufm.com/user/5f2a0381e0f5e723bb85e768/",
-        zhBadge: true,
-        hidesInNonZh: true,
-      },
     ];
 
     const typeItProps = {

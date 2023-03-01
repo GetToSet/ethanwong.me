@@ -12,6 +12,7 @@
       :href="link.link"
       :alt="link.title"
       :title="link.title"
+      :rel="link.rel"
       :style="colorStyle"
       @mouseenter="isActive = true"
       @mouseleave="isActive = false"

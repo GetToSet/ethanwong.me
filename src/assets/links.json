@@ -25,13 +25,13 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
-      "title": "Notion @ethanwong",
-      "icon": "notion",
-      "link": "https://ethanwong.notion.site/",
+      "title": "@gettoset@mastodon.social",
+      "icon": "mastodon",
+      "link": "https://mastodon.social/@gettoset/",
       "color": "var(--link-default)",
+      "rel": "me",
       "activeColor": "var(--link-white)",
-      "activeBackgroundColor": "var(--link-black)",
-      "zhBadge": true
+      "activeBackgroundColor": "#595aff"
     },
     {
       "title": "Twitter @e1hanw0ng",
@@ -64,14 +64,6 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
-      "title": "Notion @ethanwong",
-      "icon": "notion",
-      "link": "https://ethanwong.notion.site/",
-      "color": "var(--link-default)",
-      "activeColor": "var(--link-white)",
-      "activeBackgroundColor": "var(--link-black)"
-    },
-    {
       "title": "Dribbble @GetToSet",
       "icon": "dribbble",
       "link": "https://dribbble.com/GetToSet/",
@@ -82,6 +74,14 @@
       "icon": "twitter",
       "link": "https://twitter.com/e1hanw0ng/",
       "color": "#1da1f2"
+    },
+    {
+      "title": "小宇宙 @兔仔很忙",
+      "icon": "xyzfm",
+      "link": "https://www.xiaoyuzhoufm.com/user/5f2a0381e0f5e723bb85e768/",
+      "color": "#23B5E1",
+      "activeColor": "var(--link-white)",
+      "activeBackgroundColor": "#23B5E1"
     },
     {
       "title": "即刻 @兔仔很忙",

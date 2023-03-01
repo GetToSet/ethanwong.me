@@ -18,6 +18,7 @@ export interface Link {
   icon: string;
   link: string;
   color: string;
+  rel?: string;
   activeColor?: string;
   activeBackgroundColor?: string;
   zhBadge?: boolean;
