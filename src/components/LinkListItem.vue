@@ -73,7 +73,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-@import "@/scss/iconfont";
+@import "public/assets/iconfont";
 
 .link-item {
   position: relative;

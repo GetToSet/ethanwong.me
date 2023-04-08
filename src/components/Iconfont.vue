@@ -13,5 +13,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/scss/iconfont";
+@import "public/assets/iconfont";
 </style>

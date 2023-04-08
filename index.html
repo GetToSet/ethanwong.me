@@ -5,9 +5,247 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ethan's Homepage</title>
+    <noscript>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      />
+      <link rel="stylesheet" href="/assets/iconfont.css" />
+      <style>
+        @keyframes handwave {
+          0% {
+            transform: rotate(0);
+          }
+          10% {
+            transform: rotate(-15deg);
+          }
+          20% {
+            transform: rotate(0);
+          }
+          80% {
+            transform: rotate(0);
+          }
+          90% {
+            transform: rotate(-15deg);
+          }
+          100% {
+            transform: rotate(0);
+          }
+        }
+        body {
+          margin: 0;
+        }
+        p {
+          margin: 0.75em 0;
+        }
+        a {
+          color: #000;
+          font-weight: 900;
+        }
+        .body {
+          font-family: "Baloo 2", sans-serif;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          font-size: 20px;
+        }
+        .holdon {
+          margin-top: 50px;
+          width: 100%;
+        }
+        .handwave {
+          animation: handwave 3s ease-in-out infinite;
+        }
+        .intro {
+          margin: 0 32px;
+        }
+        .social {
+          text-align: right;
+        }
+        .social a {
+          text-decoration: none;
+        }
+        .social a:not(:last-child) {
+          margin-right: 2px;
+        }
+        .links {
+          font-size: 16px;
+        }
+        .links a {
+          margin-right: 2px;
+          text-decoration: none;
+        }
+        .links a:hover {
+          text-decoration: underline;
+        }
+        .links a:not(:last-child) {
+          margin-right: 6px;
+        }
+        .copyright {
+          font-size: 16px;
+          color: #999;
+        }
+        .copyright a {
+          color: unset;
+        }
+      </style>
+    </noscript>
   </head>
   <body>
     <div id="app"></div>
+    <noscript>
+      <div class="body">
+        <div class="holdon"></div>
+        <div class="intro">
+          <div style="text-align: right; margin-bottom: 10px">
+            <img class="handwave" src="/assets/handwave.png" width="52px" />
+          </div>
+          <p>Hi, I'm Ethan Wong.</p>
+          <p>
+            I'm a full-time iOS & Mac developer. 🧑‍💻<br />
+            I'm a self-taught frontend developer. 📐<br />
+            I'm a product & UI design enthusiast. 💡<br />
+            I'm a newcomer to photography. 📸<br />
+            I'm a lover of coffee. ☕️<br />
+            I'm foolish to ideas, hungry to adventures. 🏃<br />
+          </p>
+          <p class="social">
+            <a
+              href="https://github.com/GetToSet/"
+              target="_blank"
+              alt="GitHub @GetToSet"
+              title="GitHub @GetToSet"
+              class="iconfont icon-github"
+            >
+            </a>
+            <a
+              href="https://unsplash.com/@ethanwong/"
+              target="_blank"
+              alt="Unsplash @ethanwong"
+              title="Unsplash @ethanwong"
+              class="iconfont icon-unsplash"
+            >
+            </a>
+            <a
+              href="https://instagram.com/gettoset/"
+              target="_blank"
+              title="Instagram @gettoset"
+              class="iconfont icon-instagram"
+            >
+            </a>
+            <a
+              href="https://mastodon.social/@gettoset/"
+              target="_blank"
+              alt="@gettoset@mastodon.social"
+              title="@gettoset@mastodon.social"
+              class="iconfont icon-mastodon"
+              style="color: #595aff"
+            >
+            </a>
+            <a
+              href="https://twitter.com/e1hanw0ng/"
+              target="_blank"
+              alt="Twitter @e1hanw0ng"
+              title="Twitter @e1hanw0ng"
+              class="iconfont icon-twitter"
+              style="color: #1da1f2"
+            >
+            </a>
+            <a
+              href="https://dribbble.com/GetToSet/"
+              target="_blank"
+              alt="Dribbble @GetToSet"
+              title="Dribbble @GetToSet"
+              class="iconfont icon-dribbble"
+              style="color: #ea4c89"
+            >
+            </a>
+            <a
+              href="https://web.okjike.com/u/6AA96646-68E7-4614-843F-D0F8D271FDB6/"
+              target="_blank"
+              alt="即刻 @兔仔很忙"
+              title="即刻 @兔仔很忙"
+              class="iconfont icon-jike"
+              style="color: #ffe411"
+            >
+            </a>
+            <a
+              href="https://www.xiaoyuzhoufm.com/user/5f2a0381e0f5e723bb85e768/"
+              target="_blank"
+              alt="小宇宙 @兔仔很忙"
+              title="小宇宙 @兔仔很忙"
+              class="iconfont icon-xyzfm"
+              style="color: #23b5e1"
+            >
+            </a>
+          </p>
+          <p class="links">
+            <a
+              href="https://www.yuque.com/gettoset/kb/"
+              alt="Yuque"
+              title="Yuque"
+              target="_blank"
+            >
+              Yuque&nbsp;<abbr title="Content Written in Simplified Chinese"
+                ><sup>*</sup></abbr
+              >
+            </a>
+            <a
+              href="https://s.gettoset.cn/bookmarks"
+              alt="Bookmarks"
+              title="Bookmarks"
+              target="_blank"
+            >
+              Bookmarks&nbsp;<abbr title="Content Written in Simplified Chinese"
+                ><sup>*</sup></abbr
+              >
+            </a>
+            <a
+              href="https://s.gettoset.cn/bookmarks"
+              alt="Gallery"
+              title="Gallery"
+              target="_blank"
+            >
+              Gallery
+            </a>
+            <a
+              href="https://t.me/gettoset/"
+              alt="Chat"
+              title="Chat"
+              target="_blank"
+            >
+              Chat
+            </a>
+            <a
+              href="https://github.com/GetToSet/ethanwong.me/"
+              alt="GitHub"
+              title="GitHub"
+              target="_blank"
+            >
+              Source
+            </a>
+            <a
+              href="hhttps://www.buymeacoffee.com/gettoset"
+              alt="Buy me a coffee"
+              title="Buy me a coffee"
+              target="_blank"
+            >
+              ☕️&nbsp;Buy&nbsp;me&nbsp;a&nbsp;coffee
+            </a>
+          </p>
+          <p class="copyright">
+            Copyright &copy; 2020-2023
+            <a
+              href="mailto:e1hanw0ng@gmail.com"
+              alt="e1hanw0ng@gmail.com"
+              title="e1hanw0ng@gmail.com"
+              >Ethan Wong</a
+            >, All rights reserved.
+          </p>
+        </div>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.ts"></script>
     <script
       async
