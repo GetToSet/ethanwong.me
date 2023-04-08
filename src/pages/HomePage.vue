@@ -25,7 +25,7 @@
       <main>
         <h1 class="homepage__title mb-2 mx-2">
           <img
-            src="public/assets/handwave.png"
+            src="/public/assets/handwave.png"
             draggable="false"
             class="homepage__handwave d-inline-block"
           />{{ welcomeTitle }}

@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont";
-  src: url("../assets/iconfont.woff2") format("woff2"),
-    url("../assets/iconfont.woff") format("woff"),
-    url("../assets/iconfont.ttf") format("truetype"); /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  src: url("/assets/iconfont.woff2") format("woff2"),
+    url("/assets/iconfont.woff") format("woff"),
+    url("/assets/iconfont.ttf") format("truetype"); /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
 }
 
 .iconfont {

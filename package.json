@@ -26,6 +26,7 @@
     "prettier": "^2.8.7",
     "sass": "^1.60.0",
     "typescript": "^5.0.3",
-    "vite": "^4.2.1"
+    "vite": "^4.2.1",
+    "vite-plugin-css-injected-by-js": "^3.1.0"
   }
 }
