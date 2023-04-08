@@ -27,7 +27,7 @@
     {
       "title": "@gettoset@mastodon.social",
       "icon": "mastodon",
-      "link": "https://mastodon.social/@gettoset/",
+      "link": "https://mastodon.social/@gettoset",
       "color": "var(--link-default)",
       "rel": "me",
       "activeColor": "var(--link-white)",
