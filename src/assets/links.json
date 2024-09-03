@@ -25,6 +25,14 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
+      "title": "X @e1hanw0ng",
+      "icon": "x",
+      "link": "https://x.com/e1hanw0ng/",
+      "color": "var(--link-default)",
+      "activeColor": "var(--link-white)",
+      "activeBackgroundColor": "var(--link-black)"
+    },
+    {
       "title": "@gettoset@mastodon.social",
       "icon": "mastodon",
       "link": "https://mastodon.social/@gettoset",
@@ -32,12 +40,6 @@
       "rel": "me",
       "activeColor": "var(--link-white)",
       "activeBackgroundColor": "#595aff"
-    },
-    {
-      "title": "Twitter @e1hanw0ng",
-      "icon": "twitter",
-      "link": "https://twitter.com/e1hanw0ng/",
-      "color": "#1da1f2"
     },
     {
       "title": "Dribbble @GetToSet",
@@ -64,16 +66,18 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
+      "title": "X @e1hanw0ng",
+      "icon": "x",
+      "link": "https://x.com/e1hanw0ng/",
+      "color": "var(--link-default)",
+      "activeColor": "var(--link-white)",
+      "activeBackgroundColor": "var(--link-black)"
+    },
+    {
       "title": "Dribbble @GetToSet",
       "icon": "dribbble",
       "link": "https://dribbble.com/GetToSet/",
       "color": "#ea4c89"
-    },
-    {
-      "title": "Twitter @e1hanw0ng",
-      "icon": "twitter",
-      "link": "https://twitter.com/e1hanw0ng/",
-      "color": "#1da1f2"
     },
     {
       "title": "小宇宙 @兔仔很忙",
