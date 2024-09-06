@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="homepage__footer position-absolute small color-gray d-flex flex-column align-items-center"
+    class="homepage__footer position-absolute small d-flex flex-column align-items-center"
     style="bottom: 12px; max-width: 85%"
   >
     <span v-html="footerContent" />
@@ -10,7 +10,7 @@
     <hr class="w-100 my-2" />
     <ul
       v-if="footerLinkItems.length"
-      class="d-flex justify-items-center list-unstyled m-0"
+      class="d-flex align-items-center list-unstyled m-0"
     >
       <li v-for="(item, index) in footerLinkItems" :key="item.id">
         <a :href="item.link" class="px-1"
