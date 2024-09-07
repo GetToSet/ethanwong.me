@@ -59,7 +59,7 @@ export default defineComponent({
         borderColor: isActive.value
           ? props.link.activeColor || "white"
           : props.link.color,
-        backgroundColor: isActive.value ? coverColor : "inherit",
+        backgroundColor: isActive.value ? coverColor.value : "inherit",
         zIndex: isActive.value ? 2 : 0,
       };
     });

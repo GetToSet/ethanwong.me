@@ -46,7 +46,7 @@ $links-margin-screen: 2 * ($links-margin-x + $page-border-width);
   flex-wrap: wrap;
   justify-content: center;
 
-  @media (min-width: 3 * $link-item-width + $links-margin-screen) and (max-width: 6 * $link-item-width + $links-margin-screen) {
+  @media (min-width: (3 * $link-item-width + $links-margin-screen)) and (max-width: (6 * $link-item-width + $links-margin-screen)) {
     width: 3 * $link-item-width;
   }
 }
