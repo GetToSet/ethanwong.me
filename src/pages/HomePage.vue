@@ -2,6 +2,7 @@
   <div class="homepage">
     <div
       class="homepage__background position-absolute vh-100 w-100"
+      v-bind:class="{ 'homepage__background--pride': prideBackground }"
       style="top: 0"
     />
     <div class="content">
@@ -41,11 +42,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, watch } from "vue";
+import { defineComponent, computed, ref, watch } from "vue";
 
 import NavMenu from "@/components/NavMenu.vue";
 import LanguageChooser from "@/components/LanguageChooser.vue";
-import TypedComponent from "@/components/Typed.vue";
+import TypedComponent from "@/components/TypedComponent.vue";
 import LinkList from "@/components/LinkList.vue";
 import PageFooter from "@/components/PageFooter.vue";
 
@@ -83,15 +84,33 @@ export default defineComponent({
       },
     ];
 
+    // TODO: Use hooks for this.
+    const host = computed(() => location.host);
+
+    const currentLanguage = computed(() =>
+      ["gettoset.cn", "ethanwong.cn"].includes(host.value) ? "zh" : "en"
+    );
+
+    const prideBackground = ref(false);
+
+    const normalStrings = [
+      "a full-time iOS & Mac developer.",
+      "a self-taught frontend developer.",
+      "a product & UI design enthusiast.",
+      "a newcomer to photography.",
+      "a lover of coffee.",
+      "foolish to ideas, hungry to adventures.",
+    ];
+
+    const prideString = "bisexual, yet have never explored my sexuality.";
+
+    const typeStrings =
+      currentLanguage.value === "en"
+        ? [...normalStrings, ...normalStrings, prideString]
+        : [...normalStrings];
+
     const typedProps = {
-      strings: [
-        "a full-time iOS & Mac developer.",
-        "a self-taught frontend developer.",
-        "a product & UI design enthusiast.",
-        "a newcomer to photography.",
-        "a lover of coffee.",
-        "foolish to ideas, hungry to adventures.",
-      ],
+      strings: typeStrings,
       startDelay: 500,
       typeSpeed: 100,
       backSpeed: 50,
@@ -99,14 +118,10 @@ export default defineComponent({
       backDelay: 1000,
       loop: true,
       contentType: "null",
+      preStringTyped: (index: number) => {
+        prideBackground.value = typeStrings[index] === prideString;
+      },
     };
-
-    // TODO: Use hooks for this.
-    const host = computed(() => location.host);
-
-    const currentLanguage = computed(() =>
-      ["gettoset.cn", "ethanwong.cn"].includes(host.value) ? "zh" : "en"
-    );
 
     watch(
       currentLanguage,
@@ -124,6 +139,7 @@ export default defineComponent({
     );
 
     return {
+      prideBackground,
       navMenuItems,
       typedProps,
       currentLanguage,
@@ -194,6 +210,19 @@ $handwave-degree: -15deg;
       32px,
       (var(--stripe-green), var(--stripe-red), var(--stripe-yellow))
     );
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.25s linear;
+      @include stripe-background(45deg, 32px, (#d60270, #9b4f96, #0038a8));
+    }
+
+    &--pride::before {
+      opacity: 1;
+    }
   }
 
   &__navbar {
