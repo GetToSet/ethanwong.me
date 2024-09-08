@@ -31,7 +31,7 @@
           />{{ welcomeTitle }}
         </h1>
         <p class="homepage__intro mb-3 mx-2">
-          I'm <TypeIt v-bind="typeItProps" />
+          I'm <TypedComponent v-bind="typedProps" />
         </p>
       </main>
       <LinkList class="mt-3" :currentLanguage="currentLanguage" />
@@ -45,12 +45,18 @@ import { defineComponent, computed, watch } from "vue";
 
 import NavMenu from "@/components/NavMenu.vue";
 import LanguageChooser from "@/components/LanguageChooser.vue";
-import TypeIt from "@/components/TypeIt.vue";
+import TypedComponent from "@/components/Typed.vue";
 import LinkList from "@/components/LinkList.vue";
 import PageFooter from "@/components/PageFooter.vue";
 
 export default defineComponent({
-  components: { NavMenu, LanguageChooser, TypeIt, LinkList, PageFooter },
+  components: {
+    NavMenu,
+    LanguageChooser,
+    TypedComponent,
+    LinkList,
+    PageFooter,
+  },
   setup() {
     const navMenuItems = [
       {
@@ -77,7 +83,7 @@ export default defineComponent({
       },
     ];
 
-    const typeItProps = {
+    const typedProps = {
       strings: [
         "a full-time iOS & Mac developer.",
         "a self-taught frontend developer.",
@@ -86,13 +92,13 @@ export default defineComponent({
         "a lover of coffee.",
         "foolish to ideas, hungry to adventures.",
       ],
-      lifeLike: true,
+      startDelay: 500,
+      typeSpeed: 100,
+      backSpeed: 50,
+      smartBackspace: false,
+      backDelay: 1000,
       loop: true,
-      cursorSpeed: 200,
-      speed: 100,
-      deleteSpeed: 50,
-      nextStringDelay: 750,
-      breakLines: false,
+      contentType: "null",
     };
 
     // TODO: Use hooks for this.
@@ -119,7 +125,7 @@ export default defineComponent({
 
     return {
       navMenuItems,
-      typeItProps,
+      typedProps,
       currentLanguage,
       showsMigrationTip,
 

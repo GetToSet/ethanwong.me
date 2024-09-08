@@ -11,7 +11,7 @@
   "dependencies": {
     "bootstrap": "^4.6.2",
     "rfs": "^10.0.0",
-    "typeit": "^8.7.1",
+    "typed.js": "^2.1.0",
     "vue": "^3.2.47"
   },
   "devDependencies": {

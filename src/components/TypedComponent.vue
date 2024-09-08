@@ -4,13 +4,13 @@
 
 <script>
 import { defineComponent } from "vue";
-import TypeIt from "typeit";
+import Typed from "typed.js";
 
 export default defineComponent({
   mounted() {
-    new TypeIt(this.$el, {
+    new Typed(this.$el, {
       ...this.$attrs,
-    }).go();
+    });
   },
 });
 </script>
