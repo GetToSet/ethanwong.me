@@ -4,7 +4,7 @@
       <div
         class="link-item__mockup"
         v-if="isActive"
-        :style="{ backgroundColor: coverColor }"
+        :style="{ background: coverColor }"
       ></div>
     </transition>
     <a

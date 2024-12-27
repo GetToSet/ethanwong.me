@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-bluesky:before {
+  content: "\e617";
+}
+
 .icon-x:before {
   content: "\e616";
 }

@@ -17,12 +17,12 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
-      "title": "Instagram @gettoset",
+      "title": "Instagram @e1hanw0ng",
       "icon": "instagram",
-      "link": "https://instagram.com/gettoset/",
+      "link": "https://instagram.com/e1hanw0ng/",
       "color": "var(--link-default)",
       "activeColor": "var(--link-white)",
-      "activeBackgroundColor": "var(--link-black)"
+      "activeBackgroundColor": "linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7)"
     },
     {
       "title": "X @e1hanw0ng",
@@ -33,6 +33,13 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
+      "title": "@e1hanw0ng.bsky.social",
+      "icon": "bluesky",
+      "link": "https://bsky.app/profile/e1hanw0ng.bsky.social",
+      "color": "var(--link-default)",
+      "activeBackgroundColor": "#1083fe"
+    },
+    {
       "title": "@gettoset@mastodon.social",
       "icon": "mastodon",
       "link": "https://mastodon.social/@gettoset",
@@ -40,12 +47,6 @@
       "rel": "me",
       "activeColor": "var(--link-white)",
       "activeBackgroundColor": "#595aff"
-    },
-    {
-      "title": "Dribbble @GetToSet",
-      "icon": "dribbble",
-      "link": "https://dribbble.com/GetToSet/",
-      "color": "#ea4c89"
     }
   ],
   "zh": [
@@ -66,6 +67,14 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
+      "title": "Instagram @e1hanw0ng",
+      "icon": "instagram",
+      "link": "https://instagram.com/e1hanw0ng/",
+      "color": "var(--link-default)",
+      "activeColor": "var(--link-white)",
+      "activeBackgroundColor": "linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7)"
+    },
+    {
       "title": "X @e1hanw0ng",
       "icon": "x",
       "link": "https://x.com/e1hanw0ng/",
@@ -74,24 +83,20 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
-      "title": "Dribbble @GetToSet",
-      "icon": "dribbble",
-      "link": "https://dribbble.com/GetToSet/",
-      "color": "#ea4c89"
-    },
-    {
-      "title": "小宇宙 @兔仔很忙",
-      "icon": "xyzfm",
-      "link": "https://www.xiaoyuzhoufm.com/user/5f2a0381e0f5e723bb85e768/",
-      "color": "#23B5E1",
+      "title": "@e1hanw0ng.bsky.social",
+      "icon": "bluesky",
+      "link": "https://bsky.app/profile/e1hanw0ng.bsky.social",
+      "color": "var(--link-default)",
       "activeColor": "var(--link-white)",
-      "activeBackgroundColor": "#23B5E1"
+      "activeBackgroundColor": "#1083fe"
     },
     {
       "title": "即刻 @兔仔很忙",
       "icon": "jike",
       "link": "https://web.okjike.com/u/6AA96646-68E7-4614-843F-D0F8D271FDB6/",
-      "color": "#ffe411"
+      "color": "var(--link-default)",
+      "activeColor": "var(--link-white)",
+      "activeBackgroundColor": "#ffe411"
     }
   ]
 }
