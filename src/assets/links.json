@@ -83,12 +83,12 @@
       "activeBackgroundColor": "var(--link-black)"
     },
     {
-      "title": "@e1hanw0ng.bsky.social",
-      "icon": "bluesky",
-      "link": "https://bsky.app/profile/e1hanw0ng.bsky.social",
+      "title": "Follow @e1hanw0ng",
+      "icon": "follow",
+      "link": "https://app.follow.is/share/users/e1hanw0ng",
       "color": "var(--link-default)",
       "activeColor": "var(--link-white)",
-      "activeBackgroundColor": "#1083fe"
+      "activeBackgroundColor": "#ff5c00"
     },
     {
       "title": "即刻 @兔仔很忙",
