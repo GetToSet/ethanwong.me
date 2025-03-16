@@ -63,7 +63,7 @@ const beianId = computed(
     ({
       "gettoset.cn": 3,
       "ethanwong.cn": 4,
-    }[host.value] || null)
+    })[host.value] || null
 );
 
 const beianDescription = computed(
