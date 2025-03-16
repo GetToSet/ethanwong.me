@@ -1,4 +1,4 @@
-FROM node:20-alpine as vuebuild
+FROM node:22-alpine as vuebuild
 COPY . .
 RUN yarn install && npm run build
 
