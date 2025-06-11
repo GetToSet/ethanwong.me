@@ -50,7 +50,7 @@ const footerLinkItems = [
     id: "telegram",
     title: "Chat",
     titleEn: "Chat",
-    link: "https://t.me/gettoset/",
+    link: "https://t.me/e1hanw0ng/",
     zhBadge: false,
   },
 ];
