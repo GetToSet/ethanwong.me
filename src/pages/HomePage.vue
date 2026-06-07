@@ -38,6 +38,7 @@
       <LinkList class="mt-3" :currentLanguage="currentLanguage" />
       <PageFooter :currentLanguage="currentLanguage" />
     </div>
+    <AppBanner :currentLanguage="currentLanguage" />
   </div>
 </template>
 
@@ -49,6 +50,7 @@ import LanguageChooser from "@/components/LanguageChooser.vue";
 import TypedComponent from "@/components/TypedComponent.vue";
 import LinkList from "@/components/LinkList.vue";
 import PageFooter from "@/components/PageFooter.vue";
+import AppBanner from "@/components/AppBanner.vue";
 
 export default defineComponent({
   components: {
@@ -57,6 +59,7 @@ export default defineComponent({
     TypedComponent,
     LinkList,
     PageFooter,
+    AppBanner,
   },
   setup() {
     const navMenuItems = [
